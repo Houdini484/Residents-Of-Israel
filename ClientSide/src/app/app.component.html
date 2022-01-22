@@ -1,0 +1,25 @@
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center">
+    <span class="header">
+      תושבים בישראל לפי ישובים וקבוצות גיל
+    </span>
+  </header>
+  <div class="search-box">
+    <form [formGroup]="searchForm" class="row g-3 form">
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" (click)="getAllResidents()">הצג את כל המידע</button>
+        <div class="search-address">
+          <input formControlName="cityName" type="text" class="form-control" placeholder="הזן אזור מגורים">
+          <button type="submit" class="btn btn-primary search-btn mb-3" [disabled]="!searchForm.valid"
+            (click)="getAllResidentsByName()">חפש</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="row residents" *ngIf="this.residents && this.residents.length > 0">
+    <div class="col-auto" *ngFor="let r of this.residents">
+      <app-residents [residents]="r"></app-residents>
+    </div>
+  </div>
+</div>

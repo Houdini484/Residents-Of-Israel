@@ -1,0 +1,49 @@
+.container {
+  //   padding: 0;
+  
+  .header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: 700;
+    color: blueviolet;
+  }
+  
+  .search-box {
+    direction: rtl;
+    background: rgb(228, 223, 212);
+    margin-block-start: 20px;
+    height: 150px;
+    width: 100%;
+    margin: 20px 0px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .search-address {
+    display: flex;
+  }
+
+  input {
+    height: 38px;
+    width: 150px;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: red 2px solid;
+  }
+
+  .search-btn {
+    margin: 0 10px;
+  }
+
+  .residents{
+    background: rgb(228, 223, 212);
+    height: auto;
+    direction: rtl;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0;
+  }
+
+
+}

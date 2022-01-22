@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 *ngIf="residents" class="card-title">
+        {{residents.cityName}}
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">שייך למועצה - {{residents.regionName}}</h6>
+    <span class="age">בסה"כ: {{residents.total}}</span>
+    <span class="age">גילאים 0-5 {{residents.age_0_5}}</span>
+    <span class="age">גילאים 6-18: {{residents.age_6_18}}</span>
+    <span class="age">גילאים 19-45: {{residents.age_19_45}}</span>
+    <span class="age">גילאים 46-55: {{residents.age_46_55}}</span>
+    <span class="age">גילאים 56-64: {{residents.age_56_64}}</span>
+    <span class="age">גילאים מעל 65: {{residents.age_65Plus}}</span>
+  </div>
+</div>
